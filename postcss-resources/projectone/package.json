@@ -1,0 +1,17 @@
+{
+  "name": "projectone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postcss": "postcss ./src/pcss/main.pcss -o ./assets/css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "postcss": "^8.4.17",
+    "postcss-cli": "^10.0.0"
+  }
+}
+
