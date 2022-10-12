@@ -1,21 +1,36 @@
 /* Buttons */
 .btn {
-    display: inline-block;
-    font-weight: 500;
-    line-height: 1;
-    color: #011f44;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 1.25rem 1.5rem;
-    font-size: 0.9rem;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1;
+  color: #011f44;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.9rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
+
+@each $color, $value in var(--theme-colors-map) {
+  .btn-$(color) {
+    background: $(value);
+    border-color: $(value);
+    color: white;
+  }
+}
+
+/* 
 @media (prefers-reduced-motion: reduce) {
     .btn {
         transition: none;
@@ -175,5 +190,6 @@
     padding: 0.65rem 0.5rem;
     font-size: 0.8rem;
     border-radius: 0.4rem;
-}
+} */
 /* End of Buttons */
+
